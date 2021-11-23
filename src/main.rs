@@ -4,8 +4,10 @@ use std::path::Path;
 extern crate markdown;
 
 fn main() {
-    println!("Your project's been generated!");
+    
     create_project(); 
+    println!("Your project's been generated!");
+    
 }
 
 //this function creates a parent folder

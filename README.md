@@ -1,6 +1,8 @@
 # Tzalan
 
-A static site generator made with Rust. Created by Douglas Cueva Jr.
+A static site generator made with Rust.
+
+Created by Douglas Cueva Jr.
 
 ## About
 
