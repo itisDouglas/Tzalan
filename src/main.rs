@@ -5,14 +5,14 @@ extern crate markdown;
 
 fn main() {
 
-    new_project_prompts();
+    new_project_prompt();
     create_project(); 
     println!("Your project's been generated!\n");
     
 }
 
 //asks questions about the project
-fn new_project_prompts () {
+fn new_project_prompt () {
 
     let mut project_name = String::new();
     println!("Welcome to Tzalan, a Static Site Generator!\n\nWhat is your project name? ");
