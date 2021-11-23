@@ -1,10 +1,7 @@
 use std::fs;
-//use std::fs::read;
+use std::path::Path;
 
-//use askama::Template;
-
-//template structure is here
-
+extern crate markdown;
 
 fn main() {
     println!("Your project's been generated!");
@@ -21,8 +18,7 @@ fn create_project() {
     create_md();
     create_template();
 
-    // let hello = HomeTemplate {name: read("Hello/template/home.html") };
-    // println!("{}", hello.render().unwrap());
+
 }
 
 //this function creates the markdown folder and file
@@ -42,16 +38,10 @@ fn create_template() {
 
     let folder_path = "Hello/template";
     let file_path = "Hello/template/home.html";
-    let file_content = "Hello, {{name}}!"; 
+    let md_path = Path::new("Hello/markdown/home.md");
+    let md = markdown::file_to_html(md_path);
+    let file_content : String = String::from(md.unwrap()); 
 
     assert!(fs::create_dir(folder_path).is_ok());
     assert!(fs::write(file_path, file_content).is_ok());
 }
-
-// #[derive(Template)]
-// #[template(path = "Hello/template/home.html")]
-
-// struct HomeTemplate<'a> {
-
-//     name: &'a str,
-// }
