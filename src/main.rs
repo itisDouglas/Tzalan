@@ -15,9 +15,9 @@ fn main() {
 fn new_project_prompts () {
 
     let mut project_name = String::new();
-    println!("Welcome to Tzalan! a Static Site Generator.\n\nWhat is your project name? ");
+    println!("Welcome to Tzalan, a Static Site Generator!\n\nWhat is your project name? ");
     let _project = std::io::stdin().read_line(&mut project_name).unwrap();
-    println!("\nCreating a project named {}", project_name);
+    println!("\nCreating a project named {}\n", project_name);
     
 
 
